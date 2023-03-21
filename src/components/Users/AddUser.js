@@ -13,7 +13,7 @@ const AddUser = (props) => {
   const addUserHandler = (event) => {
     event.preventDefault();
     if (entereduserName.trim().length === 0 || enteredAge.trim().length === 0) {
-      console.log("entereduserName is empty");
+      // console.log("entereduserName is empty");
       setError({
         title: "Invalid Error",
         message: "Please enter a valid name ang age (non-empty values).",
@@ -22,7 +22,7 @@ const AddUser = (props) => {
     }
 
     if (+enteredAge < 1) {
-      console.log("+enteredAge is smaller than 1");
+      // console.log("+enteredAge is smaller than 1");
       setError({
         title: "Invalid Age",
         message: "Please enter a valid age (> 0).",
@@ -42,7 +42,7 @@ const AddUser = (props) => {
     setEnteredAge(event.target.value);
   };
   const onOkayHandler = () => {
-    setError("");
+    setError(null);
   };
 
   return (
